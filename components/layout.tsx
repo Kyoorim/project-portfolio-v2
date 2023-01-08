@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Center,
-  HStack,
-  SimpleGrid,
-  Stack,
-} from "ready-to-use-components";
-import styled from "styled-components";
+import { Box, Center, Stack } from "ready-to-use-components";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -17,18 +10,27 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       bg="#808080"
       boxSizing="border-box"
     >
-      <Box width="70%" height="90vh" p={25} bg="#55c0dc" boxSizing="border-box">
+      <Box
+        width={[1, 1 / 2, 4 / 5]}
+        height="90vh"
+        p={25}
+        bg="#55c0dc"
+        boxSizing="border-box"
+        borderRadius={10}
+      >
         <Stack
-          px={0}
           height="100%"
           position="relative"
           direction="row"
+          justifyContent="space-evenly"
           zIndex={1}
           boxSizing="border-box"
           bg="white"
-          width="100%"
-          // column={2}
-          // gridTemplateColumns={["1fr 60px;"]}
+          border={["2px solid"]}
+          borderColor="#737373"
+          borderRadius={10}
+          gridRowGap={30}
+          p={10}
         >
           {children}
         </Stack>

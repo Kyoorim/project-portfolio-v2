@@ -5,7 +5,6 @@ const Card = ({ children }: { children: React.ReactNode }) => {
     <Box
       width="100%"
       height="96%"
-      mt={10}
       borderRadius={10}
       zIndex={10}
       overflow="auto"
