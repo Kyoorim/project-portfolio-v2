@@ -1,11 +1,12 @@
 import React from "react";
-import { Box, Center, HStack, Stack } from "ready-to-use-components";
+import { Box, Stack } from "ready-to-use-components";
 import Nav from "./nav";
 
 const Main = ({ children }: { children: React.ReactNode }) => {
   return (
     <Stack width="65%">
       <Box
+        as="span"
         display="flex"
         flexDirection="column"
         alignItems="center"

@@ -1,17 +1,26 @@
-import { Box, Stack } from "ready-to-use-components";
+import { Box, Center, Stack } from "ready-to-use-components";
 import Image from "next/image";
 import myphoto from "../asset/myphoto.jpeg";
 import { MdMailOutline, MdLocationOn, MdPhoneIphone } from "react-icons/md";
 import { TfiGithub, TfiWrite } from "react-icons/tfi";
-import styled from "styled-components";
 
 const ProfileContent = () => {
   return (
     <Stack height="100%" justifyContent="space-between">
-      <ProfileSection>
-        <Image src={myphoto} alt="myphoto" width={50} height={50} />
-        <LinkTitle>
-          <TfiGithub />
+      <Box as="section">
+        <Image
+          src={myphoto}
+          alt="myphoto"
+          style={{ width: "100%", height: "auto" }}
+        />
+        <Box
+          as="p"
+          display="flex"
+          alignItems="center"
+          marginX="10px"
+          marginTop="20px"
+        >
+          <TfiGithub style={{ marginRight: "5px" }} />
           <a
             href="https://github.com/Kyoorim"
             target="_blank"
@@ -19,9 +28,15 @@ const ProfileContent = () => {
           >
             Github
           </a>
-        </LinkTitle>
-        <LinkTitle>
-          <TfiWrite />
+        </Box>
+        <Box
+          as="p"
+          display="flex"
+          alignItems="center"
+          marginX="10px"
+          marginTop="20px"
+        >
+          <TfiWrite style={{ marginRight: "5px" }} />
           <a
             href="https://velog.io/@tootb"
             target="_blank"
@@ -29,80 +44,35 @@ const ProfileContent = () => {
           >
             Velog
           </a>
-        </LinkTitle>
-      </ProfileSection>
-      <ProfileSection>
-        <p>
-          <span className="my-name">이규림</span>
-        </p>
-        <p>
-          <MdMailOutline />
+        </Box>
+      </Box>
+      <Box
+        as="section"
+        pt="10px"
+        pb={0}
+        borderY={["1px dashed"]}
+        borderColor="#a5a5a5"
+      >
+        <Box marginY="10px">
+          <Box as="span" marginRight="5px" color="#737373" fontWeight="bold">
+            이규림
+          </Box>
+        </Box>
+        <Box marginY="10px" display="flex" alignItems="center">
+          <MdMailOutline style={{ marginRight: "5px" }} />
           tootb.kyoo@gmail.com
-        </p>
-        <p>
-          <MdPhoneIphone />
+        </Box>
+        <Box marginY="10px" display="flex" alignItems="center">
+          <MdPhoneIphone style={{ marginRight: "5px" }} />
           010-5120-2659
-        </p>
-        <p>
-          <MdLocationOn />
+        </Box>
+        <Box marginY="10px" display="flex" alignItems="center">
+          <MdLocationOn style={{ marginRight: "5px" }} />
           서울시 서대문구
-        </p>
-      </ProfileSection>
+        </Box>
+      </Box>
     </Stack>
   );
 };
-
-const ProfileSection = styled.section`
-  height: fit-content !important;
-  &:last-of-type {
-    padding: 10px 0;
-    border-top: 1px dashed #a5a5a5;
-    border-bottom: 1px dashed #a5a5a5;
-    p {
-      display: flex;
-      align-items: center;
-      margin: 10px 0;
-    }
-    svg {
-      margin-right: 3px;
-      color: #666;
-    }
-  }
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  .my-name {
-    margin-right: 5px;
-    color: var(--gray);
-    font-size: 1rem;
-    font-weight: bold;
-  }
-`;
-
-const LinkTitle = styled.p`
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  &:first-of-type {
-    margin-top: 20px;
-  }
-  &:last-of-type {
-    margin-bottom: 20px;
-  }
-  a {
-    text-decoration: none;
-  }
-  cursor: pointer;
-  svg {
-    margin-right: 5px;
-    color: #666;
-    font-size: 1.2rem;
-  }
-  &:hover {
-    color: gray;
-  }
-`;
 
 export default ProfileContent;

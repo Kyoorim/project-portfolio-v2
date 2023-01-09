@@ -11,7 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       boxSizing="border-box"
     >
       <Box
-        width={[1, 1 / 2, 4 / 5]}
+        width={[1, 1, 4 / 5]}
         height="90vh"
         p={25}
         bg="#55c0dc"
@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <Stack
           height="100%"
           position="relative"
-          direction="row"
+          direction={["column", "column", "row"]}
           justifyContent="space-evenly"
           zIndex={1}
           boxSizing="border-box"

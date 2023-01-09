@@ -18,60 +18,70 @@ export default function Home() {
       </ProfileBar>
       <Main>
         <Card>
-          <ContentSection>
-            <h2>미니룸</h2>
-            <Box width="100%" border={["1px solid"]} borderColor="#737373">
-              <Image src={mainpic} alt="miniroom" width={100} />
+          <Box as="section">
+            <Box
+              as="h2"
+              p="5px"
+              marginBottom="10px"
+              fontWeight="bold"
+              color="thistle"
+            >
+              미니룸
             </Box>
-          </ContentSection>
-          <ContentSection>
-            <h2>Bonjour 코딩!</h2>
-            <ul>
-              <li>코딩이라는 새로운 언어와 기술을 통해::</li>
-              <li>
+            <Box width="100%" border={["1px solid"]} borderColor="#737373">
+              <Image
+                src={mainpic}
+                alt="miniroom"
+                style={{ width: "100%", height: "auto" }}
+              />
+            </Box>
+          </Box>
+          <Box as="section" marginTop="20px">
+            <Box
+              as="h2"
+              marginBottom="15px"
+              borderBottom={["2px solid"]}
+              borderColor="#eee"
+              fontWeight="bold"
+              color="thistle"
+            >
+              Bonjour 코딩!
+            </Box>
+            <Box as="ul" lineHeight="1.8" listStyleType="none" pl={0}>
+              <Box
+                as="li"
+                height={30}
+                borderBottom={["1px dashed"]}
+                borderColor="#a5a5a5"
+              >
+                코딩이라는 새로운 언어와 기술을 통해::
+              </Box>
+              <Box
+                as="li"
+                height={30}
+                borderBottom={["1px dashed"]}
+                borderColor="#a5a5a5"
+              >
                 물리적 세계를 넘어서 더 넓고 잠재력 넘치는 세상을 탐험합니다
-              </li>
-              <li>🥑로그인하시고 방명록을 남겨주세요🥑</li>
-              <li></li>
-            </ul>
-          </ContentSection>
+              </Box>
+              <Box
+                as="li"
+                height={30}
+                borderBottom={["1px dashed"]}
+                borderColor="#a5a5a5"
+              >
+                🥑로그인하시고 방명록을 남겨주세요🥑
+              </Box>
+              <Box
+                as="li"
+                height={30}
+                borderBottom={["1px dashed"]}
+                borderColor="#a5a5a5"
+              ></Box>
+            </Box>
+          </Box>
         </Card>
       </Main>
     </Layout>
   );
 }
-
-const ContentSection = styled.section`
-  height: fit-content !important;
-  h2 {
-    padding: 5px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: thistle;
-  }
-  &:first-of-type {
-    h2 {
-      margin-bottom: 5px;
-    }
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-  &:last-of-type {
-    margin-top: 20px;
-    h2 {
-      margin-bottom: 15px;
-      border-bottom: 2px solid #eee;
-    }
-  }
-  ul {
-    line-height: 1.8;
-    list-style: none;
-    padding-left: 0;
-    li {
-      height: 30px;
-      border-bottom: 1px dashed #a5a5a5;
-    }
-  }
-`;
