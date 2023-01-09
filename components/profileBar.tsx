@@ -1,6 +1,5 @@
 import React from "react";
-import { Center, Box, Stack } from "ready-to-use-components";
-import styled from "styled-components";
+import { Center, Box } from "ready-to-use-components";
 
 const ProfileBar = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -1,10 +1,9 @@
-import { Box, Center, Stack } from "ready-to-use-components";
+import { Box } from "ready-to-use-components";
 import Card from "../components/card";
 import Layout from "../components/layout";
 import Main from "../components/main";
 import ProfileBar from "../components/profileBar";
 import ProfileContent from "../components/profileContent";
-import styled from "styled-components";
 import mainpic from "../asset/mainpic.png";
 import Image from "next/image";
 

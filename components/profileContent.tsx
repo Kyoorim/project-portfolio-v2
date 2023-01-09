@@ -1,4 +1,4 @@
-import { Box, Center, Stack } from "ready-to-use-components";
+import { Box, Stack } from "ready-to-use-components";
 import Image from "next/image";
 import myphoto from "../asset/myphoto.jpeg";
 import { MdMailOutline, MdLocationOn, MdPhoneIphone } from "react-icons/md";
