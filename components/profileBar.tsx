@@ -8,8 +8,9 @@ const ProfileBar = ({ children }: { children: React.ReactNode }) => {
       flexDirection="column"
       alignItems="center"
       height="100%"
-      width="30%"
-      box-sizing="border-box"
+      width="100%"
+      boxSizing="border-box"
+      gridArea="profileBar"
     >
       <Center
         fontSize="0.8rem"
@@ -18,6 +19,7 @@ const ProfileBar = ({ children }: { children: React.ReactNode }) => {
         m={0}
         height="5%"
         list-style="none"
+        margin={[10, 10, 0]}
       >
         <Box pr={10} mr={10}>
           TODAY <span className="today">1</span>

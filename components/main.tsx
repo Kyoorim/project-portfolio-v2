@@ -4,7 +4,7 @@ import Nav from "./nav";
 
 const Main = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Stack width="65%">
+    <Stack width="100%" gridArea="main" height="100%">
       <Box
         as="span"
         display="flex"
@@ -12,8 +12,14 @@ const Main = ({ children }: { children: React.ReactNode }) => {
         alignItems="center"
         height="100%"
       >
-        <Box color="orange" fontWeight="bold" fontSize="1.1rem" height="5%">
-          ⭐️프론트엔드 개발자 이규림의 미니포트폴리오⭐️
+        <Box
+          color="orange"
+          fontWeight="bold"
+          fontSize={[2, 2, 3]}
+          height="5%"
+          margin={[10, 10, 0]}
+        >
+          FE개발자 이규림의 미니포트폴리오
         </Box>
         {children}
         {/* <Nav /> */}

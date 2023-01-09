@@ -8,7 +8,7 @@ const Card = ({ children }: { children: React.ReactNode }) => {
       borderRadius={10}
       zIndex={10}
       overflow="auto"
-      p={20}
+      p={[1, 1, 3]}
       border={["1px solid"]}
       borderColor="#737373"
       box-sizing="border-box"

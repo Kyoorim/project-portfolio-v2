@@ -1,18 +1,39 @@
-import { Box, Stack } from "ready-to-use-components";
+import { Box, SimpleGrid } from "ready-to-use-components";
 import Image from "next/image";
+import { profileTemplate } from "../theme/templete";
 import myphoto from "../asset/myphoto.jpeg";
-import { MdMailOutline, MdLocationOn, MdPhoneIphone } from "react-icons/md";
 import { TfiGithub, TfiWrite } from "react-icons/tfi";
 
 const ProfileContent = () => {
   return (
-    <Stack height="100%" justifyContent="space-between">
-      <Box as="section">
+    <SimpleGrid
+      height="100%"
+      justifyContent="space-between"
+      boxSizing="border-box"
+      gridTemplateColumns={[
+        profileTemplate.mobile.columns,
+        profileTemplate.tablet.columns,
+        profileTemplate.desktop.columns,
+      ]}
+      gridTemplateRows={[
+        profileTemplate.mobile.rows,
+        profileTemplate.tablet.rows,
+        profileTemplate.desktop.rows,
+      ]}
+      gridTemplateAreas={[
+        profileTemplate.mobile.area,
+        profileTemplate.tablet.area,
+        profileTemplate.desktop.area,
+      ]}
+    >
+      <Box as="section" gridArea="myphoto" width={[1, 3 / 4, 1]} height="auto">
         <Image
           src={myphoto}
           alt="myphoto"
           style={{ width: "100%", height: "auto" }}
         />
+      </Box>
+      <Box as="section" gridArea="mysns">
         <Box
           as="p"
           display="flex"
@@ -48,30 +69,49 @@ const ProfileContent = () => {
       </Box>
       <Box
         as="section"
-        pt="10px"
+        pt={[0, 1, 2]}
         pb={0}
         borderY={["1px dashed"]}
         borderColor="#a5a5a5"
+        gridArea="myinfo"
       >
         <Box marginY="10px">
-          <Box as="span" marginRight="5px" color="#737373" fontWeight="bold">
+          <Box
+            as="span"
+            marginRight="5px"
+            color="#737373"
+            fontWeight="bold"
+            fontSize={[1, 1, 2]}
+          >
             이규림
           </Box>
         </Box>
-        <Box marginY="10px" display="flex" alignItems="center">
-          <MdMailOutline style={{ marginRight: "5px" }} />
+        <Box
+          marginY="10px"
+          display="flex"
+          alignItems="center"
+          fontSize={[1, 1, 2]}
+        >
           tootb.kyoo@gmail.com
         </Box>
-        <Box marginY="10px" display="flex" alignItems="center">
-          <MdPhoneIphone style={{ marginRight: "5px" }} />
+        <Box
+          marginY="10px"
+          display="flex"
+          alignItems="center"
+          fontSize={[1, 1, 2]}
+        >
           010-5120-2659
         </Box>
-        <Box marginY="10px" display="flex" alignItems="center">
-          <MdLocationOn style={{ marginRight: "5px" }} />
+        <Box
+          marginY="10px"
+          display="flex"
+          alignItems="center"
+          fontSize={[1, 1, 2]}
+        >
           서울시 서대문구
         </Box>
       </Box>
-    </Stack>
+    </SimpleGrid>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Box } from "ready-to-use-components";
+import { Box, SimpleGrid } from "ready-to-use-components";
 import Card from "../components/card";
 import Layout from "../components/layout";
 import Main from "../components/main";
@@ -21,9 +21,11 @@ export default function Home() {
             <Box
               as="h2"
               p="5px"
+              marginTop="0"
               marginBottom="10px"
               fontWeight="bold"
               color="thistle"
+              fontSize={[2, 2, 3]}
             >
               미니룸
             </Box>
@@ -43,6 +45,7 @@ export default function Home() {
               borderColor="#eee"
               fontWeight="bold"
               color="thistle"
+              fontSize={[2, 2, 3]}
             >
               Bonjour 코딩!
             </Box>
@@ -52,6 +55,7 @@ export default function Home() {
                 height={30}
                 borderBottom={["1px dashed"]}
                 borderColor="#a5a5a5"
+                fontSize={[1, 2, 2]}
               >
                 코딩이라는 새로운 언어와 기술을 통해::
               </Box>
@@ -60,14 +64,16 @@ export default function Home() {
                 height={30}
                 borderBottom={["1px dashed"]}
                 borderColor="#a5a5a5"
+                fontSize={[1, 2, 2]}
               >
-                물리적 세계를 넘어서 더 넓고 잠재력 넘치는 세상을 탐험합니다
+                더 넓고 잠재력 넘치는 세상을 탐험합니다
               </Box>
               <Box
                 as="li"
                 height={30}
                 borderBottom={["1px dashed"]}
                 borderColor="#a5a5a5"
+                fontSize={[1, 2, 2]}
               >
                 🥑로그인하시고 방명록을 남겨주세요🥑
               </Box>
