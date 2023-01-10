@@ -7,11 +7,11 @@ const Card = ({ children }: { children: React.ReactNode }) => {
       height="96%"
       borderRadius={10}
       zIndex={10}
-      overflow="auto"
+      overflowY="auto"
       p={[1, 1, 3]}
       border={["1px solid"]}
       borderColor="#737373"
-      box-sizing="border-box"
+      boxSizing="border-box"
     >
       {children}
     </Box>

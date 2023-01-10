@@ -46,6 +46,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           gridRowGap={30}
           p={[1, 2, 3]}
           pb={[4, 4, 3]}
+          // overflowY="scroll"
         >
           {children}
         </SimpleGrid>
