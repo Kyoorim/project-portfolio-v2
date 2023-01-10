@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Center, SimpleGrid, Stack } from "ready-to-use-components";
 import { template } from "../theme/templete";
+import Nav from "./nav";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -18,10 +19,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         bg="#55c0dc"
         boxSizing="border-box"
         borderRadius={10}
+        position="relative"
       >
+        <Nav />
         <SimpleGrid
           height="100%"
-          position="relative"
           gridTemplateColumns={[
             template.mobile.columns,
             template.tablet.columns,

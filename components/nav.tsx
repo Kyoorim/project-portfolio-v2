@@ -1,22 +1,38 @@
 import React from "react";
-import { Box, Center } from "ready-to-use-components";
+import { Box, Center, SimpleGrid } from "ready-to-use-components";
+import { useRouter } from "next/router";
+import Link from "next/link";
+
+const navLinks = [
+  { title: "Home", path: "/" },
+  { title: "AboutMe", path: "/aboutMe" },
+];
 
 const Nav = () => {
+  //   const router = useRouter();
   return (
-    <Center
+    <Box
       as="nav"
       zIndex={1}
       position="absolute"
-      top="70px"
-      right="70px"
-      bg="white"
+      top={-12}
+      right={40}
+      bg="#3188ae"
+      borderRadius="10px 10px 0px 0px"
     >
-      <Box as="ul">
-        <Box as="li">홈</Box>
-        <Box as="li">프로필</Box>
-        <Box as="li">방명록</Box>
+      <Box as="ul" p={10} display="flex" m={0}>
+        {navLinks.map((link) => (
+          <Center as="li" key={link.title} px={10}>
+            <Link
+              href={link.path}
+              style={{ color: "white", fontWeight: "700" }}
+            >
+              {link.title}
+            </Link>
+          </Center>
+        ))}
       </Box>
-    </Center>
+    </Box>
   );
 };
 
