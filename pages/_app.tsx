@@ -9,6 +9,13 @@ const App = ({ Component, pageProps }: AppProps) => {
         {`
           body {
             margin: 0;
+            box-sizing: border-box;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
+              Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+              Helvetica Neue, sans-serif;
+          }
+          li {
+            list-style: none;
           }
         `}
       </style>

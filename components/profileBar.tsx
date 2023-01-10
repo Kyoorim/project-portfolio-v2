@@ -17,7 +17,7 @@ const ProfileBar = ({ children }: { children: React.ReactNode }) => {
         lineHeight={1.4}
         p={0}
         m={0}
-        height="5%"
+        height="40px"
         list-style="none"
         margin={[10, 10, 0]}
       >
