@@ -4,7 +4,6 @@ import Main from "../components/main";
 import MyInfo from "../components/myInfo";
 import ProfileBar from "../components/profileBar";
 import ProfileList from "../components/profileList";
-import { Box } from "ready-to-use-components";
 
 const AboutMe = () => {
   return (
