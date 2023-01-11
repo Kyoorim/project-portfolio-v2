@@ -1,5 +1,4 @@
 import { Box, Stack } from "ready-to-use-components";
-// import Nav from "./nav";
 
 const Main = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -21,7 +20,6 @@ const Main = ({ children }: { children: React.ReactNode }) => {
           FE개발자 이규림의 미니포트폴리오
         </Box>
         {children}
-        {/* <Nav /> */}
       </Box>
     </Stack>
   );
