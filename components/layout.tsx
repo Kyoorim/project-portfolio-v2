@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       bg="#808080"
       boxSizing="border-box"
       gridColumnGap={[0, 0, 3]}
-      gridRowGap={[3, 3, 0]}
+      gridRowGap={[2, 2, 0]}
       gridTemplateColumns={[
         mainTemplate.mobile.columns,
         mainTemplate.tablet.columns,
@@ -31,7 +31,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     >
       <Box
         width="100%"
-        height="auto"
+        height={["100%", "100%", "95%"]}
         p={25}
         bg="#55c0dc"
         boxSizing="border-box"

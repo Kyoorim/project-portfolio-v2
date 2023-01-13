@@ -58,7 +58,7 @@ export const profileTemplate = {
 
 export const mainTemplate = {
   mobile: {
-    rows: "80% auto 20%",
+    rows: "90% 10%",
     columns: "auto",
     area: ` 
     "playlist"
@@ -66,7 +66,7 @@ export const mainTemplate = {
      `,
   },
   tablet: {
-    rows: "80% auto 20%",
+    rows: "90% 10%",
     columns: "auto",
     area: ` 
     "playlist"

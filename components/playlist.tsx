@@ -10,9 +10,9 @@ const Playlist = () => {
       gridArea="playlist"
       p="5px"
       borderRadius="3px"
-      bg="#eee"
+      bg="#eeeeee"
       width={[1 / 3, 1 / 3, 1]}
-      height={["100%", "100%", "10%"]}
+      height={["90%", "90%", "10%"]}
     >
       {/*Wrapper*/}
       <Center
@@ -25,7 +25,10 @@ const Playlist = () => {
       >
         타이틀 곡
       </Center>
-      <audio controls style={{ width: "100%", height: "60%" }}>
+      <audio
+        controls
+        style={{ width: "100%", height: "60%", backgroundColor: "#eeeeee" }}
+      >
         Your browser does not support the audio element.
       </audio>
 
