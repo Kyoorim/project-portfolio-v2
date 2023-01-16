@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Center } from "ready-to-use-components";
 
 const Playlist = () => {
-  const [openList, setIsOpenList] = useState(false);
-  const listHandler = () => setIsOpenList(!openList);
-
   return (
     <Box
       gridArea="playlist"
@@ -21,28 +18,17 @@ const Playlist = () => {
         borderRadius={3}
         bg="darkgrey"
         m={0}
-        fontSize={[1, 1, 2]}
+        fontSize={0.5}
       >
-        타이틀 곡
+        Chopin - Opus 32 No. 2 in A flat Major
       </Center>
       <audio
         controls
         style={{ width: "100%", height: "60%", backgroundColor: "#eeeeee" }}
+        src="/music/track1.mp3"
       >
         Your browser does not support the audio element.
       </audio>
-
-      {/* <button onClick={listHandler}>list</button>
-      <Box as="ul" bg="#333" color="#eee" borderRadius={3} p={0}>
-        <Box as="li">
-          <Box as="p" fontSize={[1, 1, 2]}>
-            재생곡1
-          </Box>
-          <Box as="p" fontSize={[1, 1, 2]}>
-            재생곡2
-          </Box>
-        </Box>
-      </Box> */}
     </Box>
   );
 };
