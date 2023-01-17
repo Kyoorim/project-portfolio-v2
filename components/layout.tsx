@@ -1,25 +1,44 @@
-import React from "react";
-import { Box, Center, SimpleGrid, Stack } from "ready-to-use-components";
-import { template } from "../theme/templete";
+import { Box, SimpleGrid } from "ready-to-use-components";
+import { template, mainTemplate } from "../theme/templete";
 import Nav from "./nav";
+import Playlist from "./playlist";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Center
+    <SimpleGrid
       width="100%"
       height="100vh"
       p={20}
       bg="#808080"
       boxSizing="border-box"
+      gridColumnGap={[0, 0, 3]}
+      gridRowGap={[2, 2, 0]}
+      gridTemplateColumns={[
+        mainTemplate.mobile.columns,
+        mainTemplate.tablet.columns,
+        mainTemplate.desktop.columns,
+      ]}
+      gridTemplateRows={[
+        mainTemplate.mobile.rows,
+        mainTemplate.tablet.rows,
+        mainTemplate.desktop.rows,
+      ]}
+      gridTemplateAreas={[
+        mainTemplate.mobile.area,
+        mainTemplate.tablet.area,
+        mainTemplate.desktop.area,
+      ]}
     >
       <Box
-        width={[1, 1, 2 / 3]}
-        height="90vh"
+        width="100%"
+        height={["100%", "100%", "95%"]}
         p={25}
         bg="#55c0dc"
         boxSizing="border-box"
         borderRadius={10}
         position="relative"
+        alignItems="center"
+        gridArea="mainContainer"
       >
         <Nav />
         <SimpleGrid
@@ -53,7 +72,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {children}
         </SimpleGrid>
       </Box>
-    </Center>
+      <Playlist />
+    </SimpleGrid>
   );
 };
 

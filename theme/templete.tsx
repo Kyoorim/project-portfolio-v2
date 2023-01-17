@@ -55,3 +55,29 @@ export const profileTemplate = {
        `,
   },
 };
+
+export const mainTemplate = {
+  mobile: {
+    rows: "90% 10%",
+    columns: "auto",
+    area: ` 
+    "playlist"
+     "mainContainer"
+     `,
+  },
+  tablet: {
+    rows: "90% 10%",
+    columns: "auto",
+    area: ` 
+    "playlist"
+    "mainContainer"
+     `,
+  },
+  desktop: {
+    rows: "auto",
+    columns: "80% auto",
+    area: ` 
+     "mainContainer playlist"
+     `,
+  },
+};
