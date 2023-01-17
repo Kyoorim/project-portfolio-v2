@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Center } from "ready-to-use-components";
+import { FcPrevious, FcNext } from "react-icons/fc";
+
+const songs = [
+  {
+    title: "Chopin - Opus 32 No. 2 in A flat Major",
+    path: "/music/track1.mp3",
+  },
+  { title: "Chopin - Opus 37 No. 1 in G Minor", path: "/music/track2.mp3" },
+  {
+    title: "Chopin - Opus 15 No. 2 in F sharp Major",
+    path: "/music/track3.mp3",
+  },
+];
 
 const Playlist = () => {
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+
+  const next = () => {
+    setCurrentSongIndex((currentSongIndex + 1) % songs.length);
+  };
+
+  const prev = () => {
+    if (currentSongIndex === 0) setCurrentSongIndex(songs.length - 1);
+    else setCurrentSongIndex(currentSongIndex - 1);
+  };
+
   return (
     <Box
       gridArea="playlist"
@@ -18,14 +42,17 @@ const Playlist = () => {
         borderRadius={3}
         bg="darkgrey"
         m={0}
-        fontSize={0.5}
+        fontSize="1vw"
+        justifyContent="space-between"
       >
-        Chopin - Opus 32 No. 2 in A flat Major
+        <FcPrevious style={{ fontSize: "2.5vw" }} onClick={prev} />
+        <Box>{songs[currentSongIndex].title}</Box>
+        <FcNext style={{ fontSize: "2.5vw" }} onClick={next} />
       </Center>
       <audio
         controls
         style={{ width: "100%", height: "60%", backgroundColor: "#eeeeee" }}
-        src="/music/track1.mp3"
+        src={songs[currentSongIndex].path}
       >
         Your browser does not support the audio element.
       </audio>
