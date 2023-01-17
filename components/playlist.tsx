@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { Box, Center } from "ready-to-use-components";
 import { FcPrevious, FcNext } from "react-icons/fc";
+import styled from "styled-components";
 
 const songs = [
   {
-    title: "Chopin - Opus 32 No. 2 in A flat Major",
+    title: " Chopin - Opus 32 No. 2 in A flat Major -- ",
     path: "/music/track1.mp3",
   },
-  { title: "Chopin - Opus 37 No. 1 in G Minor", path: "/music/track2.mp3" },
   {
-    title: "Chopin - Opus 15 No. 2 in F sharp Major",
+    title: " Chopin - Opus 37 No. 1 in G Minor -- ",
+    path: "/music/track2.mp3",
+  },
+  {
+    title: " Chopin - Opus 15 No. 2 in F sharp Major -- ",
     path: "/music/track3.mp3",
   },
 ];
@@ -45,9 +49,12 @@ const Playlist = () => {
         fontSize="1vw"
         justifyContent="space-between"
       >
-        <FcPrevious style={{ fontSize: "2.5vw" }} onClick={prev} />
-        <Box>{songs[currentSongIndex].title}</Box>
-        <FcNext style={{ fontSize: "2.5vw" }} onClick={next} />
+        <FcPrevious style={{ fontSize: "2vw", width: "4vw" }} onClick={prev} />
+        <TitleWrap>
+          <Title>{songs[currentSongIndex].title}</Title>
+          <Title>{songs[currentSongIndex].title}</Title>
+        </TitleWrap>
+        <FcNext style={{ fontSize: "2vw", width: "4vw" }} onClick={next} />
       </Center>
       <audio
         controls
@@ -59,5 +66,24 @@ const Playlist = () => {
     </Box>
   );
 };
+
+const TitleWrap = styled.div`
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+`;
+
+const Title = styled.div`
+  animation: textLoop 8s linear infinite;
+
+  @keyframes textLoop {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+`;
 
 export default Playlist;
