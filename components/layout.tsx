@@ -31,8 +31,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     >
       <Box
         width="100%"
-        height={["100%", "100%", "95%"]}
-        p={25}
+        height={["100%", "100%", "90vh"]}
+        p="25px"
         bg="#55c0dc"
         boxSizing="border-box"
         borderRadius={10}

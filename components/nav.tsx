@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Center, SimpleGrid } from "ready-to-use-components";
-import { useRouter } from "next/router";
+import { Box, Center } from "ready-to-use-components";
 import Link from "next/link";
 
 const navLinks = [
@@ -9,7 +8,6 @@ const navLinks = [
 ];
 
 const Nav = () => {
-  //   const router = useRouter();
   return (
     <Box
       as="nav"

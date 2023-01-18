@@ -16,7 +16,7 @@ export type AnswerType = {
 
 const AnswerBox = ({ answer }: AnswerType) => {
   return (
-    <Center
+    <Box
       as="li"
       flexDirection="column"
       alignItems="center"
@@ -27,18 +27,20 @@ const AnswerBox = ({ answer }: AnswerType) => {
       <Box as="h1" color="orange" pt={20}>
         {answer.title}
       </Box>
-      <Box as="p">{answer.intro}</Box>
+      <Box as="p" whiteSpace="pre-wrap">
+        {answer.intro}
+      </Box>
       {!answer.intro && (
         <>
-          <h2>{answer.name1}</h2>
+          <h3>{answer.name1}</h3>
           <span>{answer.content1}</span>
-          <h2>{answer.name2}</h2>
+          <h3>{answer.name2}</h3>
           <span>{answer.content2}</span>
-          <h2>{answer.name3}</h2>
+          <h3>{answer.name3}</h3>
           <span>{answer.content3}</span>
         </>
       )}
-    </Center>
+    </Box>
   );
 };
 

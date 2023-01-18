@@ -33,7 +33,7 @@ const ProfileContent = () => {
           style={{ width: "100%", height: "auto" }}
         />
       </Box>
-      <Box as="section" gridArea="mysns">
+      <Box as="section" gridArea="mysns" fontSize={[1, 1, 2]}>
         <Box
           as="p"
           display="flex"
@@ -71,6 +71,7 @@ const ProfileContent = () => {
         as="section"
         pt={[0, 1, 2]}
         pb={0}
+        mb="4px"
         borderY={["1px dashed"]}
         borderColor="#a5a5a5"
         gridArea="myinfo"
