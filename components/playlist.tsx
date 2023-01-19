@@ -36,8 +36,8 @@ const Playlist = () => {
       p="5px"
       borderRadius="3px"
       bg="#eeeeee"
-      width={[1 / 3, 1 / 3, 1]}
-      height={["90%", "90%", "10%"]}
+      width={[2 / 5, 2 / 5, 1]}
+      height={["100%", "100%", "10%"]}
     >
       {/*Wrapper*/}
       <Center
@@ -71,6 +71,7 @@ const TitleWrap = styled.div`
   display: flex;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 0.8rem;
 `;
 
 const Title = styled.div`
