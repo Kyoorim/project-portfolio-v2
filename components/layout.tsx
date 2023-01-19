@@ -64,7 +64,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           border={["2px solid"]}
           borderColor="#737373"
           borderRadius={10}
-          gridRowGap={30}
+          // gridRowGap={30}
+          gridColumnGap={[0, 0, 2]}
+          gridRowGap={[3, 3, 0]}
           p={[1, 2, 3]}
           pb={[4, 4, 3]}
           // overflowY="scroll"
