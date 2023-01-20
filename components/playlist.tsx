@@ -36,7 +36,7 @@ const Playlist = () => {
       p="5px"
       borderRadius="3px"
       bg="#eeeeee"
-      width={[2 / 5, 2 / 5, 1]}
+      width={[1, 1, 1]}
       height={["100%", "100%", "10%"]}
     >
       {/*Wrapper*/}

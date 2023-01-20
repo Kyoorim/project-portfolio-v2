@@ -30,7 +30,7 @@ const ProfileContent = () => {
         <Image
           src={myphoto}
           alt="myphoto"
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "100%", height: "auto", borderRadius: "10px" }}
         />
       </Box>
       <Box as="section" gridArea="mysns" fontSize={[1, 1, 2]}>
@@ -39,7 +39,7 @@ const ProfileContent = () => {
           display="flex"
           alignItems="center"
           marginX="10px"
-          marginTop="20px"
+          marginTop="10px"
         >
           <TfiGithub style={{ marginRight: "5px" }} />
           <a
@@ -55,7 +55,7 @@ const ProfileContent = () => {
           display="flex"
           alignItems="center"
           marginX="10px"
-          marginTop="20px"
+          marginTop="10px"
         >
           <TfiWrite style={{ marginRight: "5px" }} />
           <a
@@ -71,12 +71,11 @@ const ProfileContent = () => {
         as="section"
         pt={[0, 1, 2]}
         pb={0}
-        mb="4px"
         borderY={["1px dashed"]}
         borderColor="#a5a5a5"
         gridArea="myinfo"
       >
-        <Box marginY="10px">
+        <Box marginY="5px" p="4px">
           <Box
             as="span"
             marginRight="5px"
@@ -88,26 +87,28 @@ const ProfileContent = () => {
           </Box>
         </Box>
         <Box
-          marginY="10px"
+          as={"a"}
+          href={"mailto:tootb.kyoo@gmail.com"}
+          marginY="8px"
           display="flex"
           alignItems="center"
-          fontSize={[1, 1, 2]}
+          fontSize={["0.8rem", 1, 2]}
         >
           tootb.kyoo@gmail.com
         </Box>
         <Box
-          marginY="10px"
+          marginY="8px"
           display="flex"
           alignItems="center"
-          fontSize={[1, 1, 2]}
+          fontSize={["0.8rem", 1, 2]}
         >
           010-5120-2659
         </Box>
         <Box
-          marginY="10px"
+          marginY="8px"
           display="flex"
           alignItems="center"
-          fontSize={[1, 1, 2]}
+          fontSize={["0.8rem", 1, 2]}
         >
           서울시 서대문구
         </Box>
