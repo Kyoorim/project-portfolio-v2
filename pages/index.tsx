@@ -1,4 +1,4 @@
-import { Box, SimpleGrid } from "ready-to-use-components";
+import { Box } from "ready-to-use-components";
 import Card from "../components/card";
 import Layout from "../components/layout";
 import Main from "../components/main";
@@ -7,15 +7,15 @@ import ProfileContent from "../components/profileContent";
 import mainpic from "../asset/mainpic.png";
 import Image from "next/image";
 
-export default function Home() {
+export default function Home({ isLoggedIn, userObj }) {
   return (
     <Layout>
       <ProfileBar>
         <Card>
-          <ProfileContent />
+          <ProfileContent isLoggedIn={isLoggedIn} userObj={userObj} />
         </Card>
       </ProfileBar>
-      <Main>
+      <Main isLoggedIn={isLoggedIn} userObj={userObj}>
         <Card>
           <Box as="section">
             <Box

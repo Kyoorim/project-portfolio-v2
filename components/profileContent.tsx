@@ -1,10 +1,26 @@
-import { Box, SimpleGrid } from "ready-to-use-components";
+import { Box, Center, SimpleGrid } from "ready-to-use-components";
 import Image from "next/image";
 import { profileTemplate } from "../theme/templete";
 import myphoto from "../asset/myphoto.jpeg";
 import { TfiGithub, TfiWrite } from "react-icons/tfi";
 
-const ProfileContent = () => {
+import { authService } from "../config";
+import { apiService } from "../pages/api";
+
+const ProfileContent = ({ isLoggedIn, userObj }) => {
+  const onSocialClick = async (e) => {
+    try {
+      await apiService.SocialLogin(e);
+      alert("로그인 성공");
+    } catch {
+      alert("로그인이 실패했습니다");
+    }
+  };
+
+  const onLogoutClick = () => {
+    authService.signOut();
+  };
+
   return (
     <SimpleGrid
       height="100%"
@@ -67,12 +83,13 @@ const ProfileContent = () => {
           </a>
         </Box>
       </Box>
+      {/* <Box width="100%" height="1px" bg="#a5a5a5"></Box> */}
       <Box
         as="section"
         pt={[0, 1, 2]}
         pb={0}
-        borderY={["1px dashed"]}
-        borderColor="#a5a5a5"
+        // borderY={["1px dashed"]}
+        // borderColor="#a5a5a5"
         gridArea="myinfo"
       >
         <Box marginY="5px">
@@ -113,6 +130,30 @@ const ProfileContent = () => {
           서울시 서대문구
         </Box>
       </Box>
+      <Center as="section" gridArea="signin">
+        {isLoggedIn ? (
+          <Box
+            as="button"
+            border="none"
+            bg="white"
+            onClick={onLogoutClick}
+            fontSize={["0.7rem", 1, 2]}
+          >
+            로그아웃
+          </Box>
+        ) : (
+          <Box
+            as="button"
+            name="google"
+            border="none"
+            bg="white"
+            onClick={onSocialClick}
+            fontSize={["0.7rem", 1, 2]}
+          >
+            구글로 로그인
+          </Box>
+        )}
+      </Center>
     </SimpleGrid>
   );
 };
