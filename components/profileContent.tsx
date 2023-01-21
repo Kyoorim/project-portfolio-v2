@@ -33,7 +33,7 @@ const ProfileContent = () => {
           style={{ width: "100%", height: "auto", borderRadius: "10px" }}
         />
       </Box>
-      <Box as="section" gridArea="mysns" fontSize={[1, 1, 2]}>
+      <Box as="section" gridArea="mysns" fontSize={["0.7rem", "0.7rem", 2]}>
         <Box
           as="p"
           display="flex"
@@ -75,7 +75,7 @@ const ProfileContent = () => {
         borderColor="#a5a5a5"
         gridArea="myinfo"
       >
-        <Box marginY="5px" p="4px">
+        <Box marginY="5px">
           <Box
             as="span"
             marginRight="5px"
@@ -92,7 +92,7 @@ const ProfileContent = () => {
           marginY="8px"
           display="flex"
           alignItems="center"
-          fontSize={["0.8rem", 1, 2]}
+          fontSize={["0.7rem", 1, 2]}
         >
           tootb.kyoo@gmail.com
         </Box>
@@ -100,7 +100,7 @@ const ProfileContent = () => {
           marginY="8px"
           display="flex"
           alignItems="center"
-          fontSize={["0.8rem", 1, 2]}
+          fontSize={["0.7rem", 1, 2]}
         >
           010-5120-2659
         </Box>
@@ -108,7 +108,7 @@ const ProfileContent = () => {
           marginY="8px"
           display="flex"
           alignItems="center"
-          fontSize={["0.8rem", 1, 2]}
+          fontSize={["0.7rem", 1, 2]}
         >
           서울시 서대문구
         </Box>
