@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { dbService, storageService } from "../config";
+import { dbService } from "../config";
 import { doc, deleteDoc, updateDoc } from "firebase/firestore";
-import { deleteObject, ref } from "firebase/storage";
 import { Box, Center } from "ready-to-use-components";
-import Image from "next/image";
 
 const BoardBox = ({ list, isOwner, isLoggedIn }) => {
   const [editing, setEditing] = useState(false);
@@ -15,8 +13,6 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
     const ok = window.confirm("정말로 삭제하시겠습니까?");
     if (ok) {
       await deleteDoc(PostRef);
-      const desertRef = ref(storageService, list.attachmentUrl);
-      await deleteObject(desertRef);
     }
   };
 
@@ -62,7 +58,7 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
           border={["1px solid"]}
           borderColor="#d3d3d3"
           bx="none"
-          mt={2}
+          mt={3}
         >
           <Box
             display="flex"
@@ -99,24 +95,16 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
           <Box
             display="flex"
             alignItems="flex-start"
-            p={["10px 15px 5px 15px"]}
+            p={["10px 15px 10px 15px"]}
             boxSizing="border-box"
             width="100%"
           >
-            <Box
-              width="20%"
-              height="auto"
-              mr="10px"
-              fontSize={["0.7rem", "0.7rem", 1]}
-            >
-              이미지 없음
-            </Box>
             <Box
               as="section"
               display="flex"
               flexDirection="column"
               alignItems="flex-end"
-              width="80%"
+              width="100%"
             >
               <Box
                 as="textarea"
@@ -142,7 +130,7 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
           border={["1px solid"]}
           borderColor="#d3d3d3"
           bx="none"
-          mt={2}
+          mt={3}
         >
           <Box
             display="flex"
@@ -150,11 +138,12 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
             alignItems="center"
             bg="#f6f6f6"
             p={["2px 10px 2px 10px"]}
+            width="100%"
           >
             <Center>
               <Box
                 as="h4"
-                fontSize="0.9rem"
+                fontSize="0.8rem"
                 my="0px"
                 mr="10px"
                 fontWeight={700}
@@ -162,18 +151,19 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
               >
                 {list.author}
               </Box>
-              <Box as="span" fontSize="0.8rem" color="#787878">
+              <Box as="span" fontSize="0.7rem" color="#787878">
                 ({list.postedAt})
               </Box>
             </Center>
             {isOwner && isLoggedIn && (
-              <Box>
+              <Box width="30%" display="flex" justifyContent="flex-end">
                 <Box
                   as="button"
                   onClick={toggleEditing}
                   border="none"
                   color="inherit"
                   bg="#f6f6f6"
+                  fontSize="0.8rem"
                 >
                   수정
                 </Box>
@@ -184,6 +174,7 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
                   border="none"
                   color="inherit"
                   bg="#f6f6f6"
+                  fontSize="0.8rem"
                 >
                   삭제
                 </Box>
@@ -191,15 +182,6 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
             )}
           </Box>
           <Box>
-            {list.attachmentUrl && (
-              <Box>
-                <Image
-                  src={list.attachmentUrl}
-                  alt="photo"
-                  style={{ width: "86px", height: "86px" }}
-                />
-              </Box>
-            )}
             <Box
               as="section"
               display="flex"

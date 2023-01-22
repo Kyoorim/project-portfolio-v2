@@ -3,22 +3,12 @@ import Image from "next/image";
 import { profileTemplate } from "../theme/templete";
 import myphoto from "../asset/myphoto.jpeg";
 import { TfiGithub, TfiWrite } from "react-icons/tfi";
-
 import { authService } from "../config";
-import { apiService } from "../pages/api";
 
 const ProfileContent = ({ isLoggedIn, userObj }) => {
-  const onSocialClick = async (e) => {
-    try {
-      await apiService.SocialLogin(e);
-      alert("로그인 성공");
-    } catch {
-      alert("로그인이 실패했습니다");
-    }
-  };
-
   const onLogoutClick = () => {
     authService.signOut();
+    alert("로그아웃 되었습니다");
   };
 
   return (
@@ -83,13 +73,12 @@ const ProfileContent = ({ isLoggedIn, userObj }) => {
           </a>
         </Box>
       </Box>
-      {/* <Box width="100%" height="1px" bg="#a5a5a5"></Box> */}
       <Box
         as="section"
         pt={[0, 1, 2]}
         pb={0}
-        // borderY={["1px dashed"]}
-        // borderColor="#a5a5a5"
+        borderY={["1px dashed"]}
+        borderColor={["white", "white", "#a5a5a5"]}
         gridArea="myinfo"
       >
         <Box marginY="5px">
@@ -131,7 +120,7 @@ const ProfileContent = ({ isLoggedIn, userObj }) => {
         </Box>
       </Box>
       <Center as="section" gridArea="signin">
-        {isLoggedIn ? (
+        {isLoggedIn && (
           <Box
             as="button"
             border="none"
@@ -139,18 +128,7 @@ const ProfileContent = ({ isLoggedIn, userObj }) => {
             onClick={onLogoutClick}
             fontSize={["0.7rem", 1, 2]}
           >
-            로그아웃
-          </Box>
-        ) : (
-          <Box
-            as="button"
-            name="google"
-            border="none"
-            bg="white"
-            onClick={onSocialClick}
-            fontSize={["0.7rem", 1, 2]}
-          >
-            구글로 로그인
+            로그아웃하기
           </Box>
         )}
       </Center>

@@ -31,7 +31,8 @@ export const profileTemplate = {
     columns: "28% 27% auto",
     area: ` 
        "myphoto mysns myinfo"
-      "signin signin myinfo"
+       "myphoto mysns myinfo"
+       "signin mysns myinfo"
        `,
   },
   tablet: {
