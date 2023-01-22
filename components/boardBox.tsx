@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { dbService, storageService } from "../config";
 import { doc, deleteDoc, updateDoc } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
-import { Box } from "ready-to-use-components";
+import { Box, Center } from "ready-to-use-components";
 import Image from "next/image";
 
 const BoardBox = ({ list, isOwner, isLoggedIn }) => {
@@ -52,45 +52,139 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
   return (
     <>
       {editing ? (
-        <Box as="form" onSubmit={onSubmit}>
-          <Box>
+        <Box
+          as="form"
+          onSubmit={onSubmit}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          width="100%"
+          border={["1px solid"]}
+          borderColor="#d3d3d3"
+          bx="none"
+          mt={2}
+        >
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            bg="#f6f6f6"
+            p={["2px 10px 2px 10px"]}
+          >
+            <Center>
+              <Box
+                as="h4"
+                fontSize="0.9rem"
+                my="0px"
+                mr="10px"
+                fontWeight={700}
+                color="#787878"
+              >
+                {list.author}
+              </Box>
+              <Box as="span" fontSize="0.8rem" color="#787878" mr="10px">
+                ({list.postedAt})
+              </Box>
+            </Center>
             <Box>
-              <h4>{list.author}</h4>
-              <span>({list.postedAt})</span>
-            </Box>
-            <Box>
-              <button type="submit" value="update post">
+              <button
+                type="submit"
+                value="update post"
+                style={{ border: "none", backgroundColor: "#f6f6f6" }}
+              >
                 업데이트
               </button>
             </Box>
           </Box>
-          <Box>
-            <Box>이미지</Box>
-            <Box as="section">
+          <Box
+            display="flex"
+            alignItems="flex-start"
+            p={["10px 15px 5px 15px"]}
+            boxSizing="border-box"
+            width="100%"
+          >
+            <Box
+              width="20%"
+              height="auto"
+              mr="10px"
+              fontSize={["0.7rem", "0.7rem", 1]}
+            >
+              이미지 없음
+            </Box>
+            <Box
+              as="section"
+              display="flex"
+              flexDirection="column"
+              alignItems="flex-end"
+              width="80%"
+            >
               <Box
                 as="textarea"
                 value={newText}
                 type="text"
                 placeholder="내용을 수정하세요"
                 onChange={onTextChange}
+                width="100%"
+                border={["1px solid"]}
+                borderColor="#d3d3d3"
               ></Box>
             </Box>
           </Box>
         </Box>
       ) : (
-        <Box>
-          <Box>
-            <Box>
-              <h4>{list.author}</h4>
-              <span>({list.postedAt})</span>
-            </Box>
+        <Box
+          as="form"
+          onSubmit={onSubmit}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          width="100%"
+          border={["1px solid"]}
+          borderColor="#d3d3d3"
+          bx="none"
+          mt={2}
+        >
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            bg="#f6f6f6"
+            p={["2px 10px 2px 10px"]}
+          >
+            <Center>
+              <Box
+                as="h4"
+                fontSize="0.9rem"
+                my="0px"
+                mr="10px"
+                fontWeight={700}
+                color="#787878"
+              >
+                {list.author}
+              </Box>
+              <Box as="span" fontSize="0.8rem" color="#787878">
+                ({list.postedAt})
+              </Box>
+            </Center>
             {isOwner && isLoggedIn && (
               <Box>
-                <Box as="button" onClick={toggleEditing}>
-                  수정{" "}
+                <Box
+                  as="button"
+                  onClick={toggleEditing}
+                  border="none"
+                  color="inherit"
+                  bg="#f6f6f6"
+                >
+                  수정
                 </Box>
                 <span>|</span>
-                <Box as="button" onClick={onDeleteClick}>
+                <Box
+                  as="button"
+                  onClick={onDeleteClick}
+                  border="none"
+                  color="inherit"
+                  bg="#f6f6f6"
+                >
                   삭제
                 </Box>
               </Box>
@@ -106,8 +200,15 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
                 />
               </Box>
             )}
-            <Box as="section">
-              <Box as="p">{list.text}</Box>
+            <Box
+              as="section"
+              display="flex"
+              flexDirection="column"
+              alignItems="flex-end"
+            >
+              <Box as="p" width="95%">
+                {list.text}
+              </Box>
             </Box>
           </Box>
         </Box>

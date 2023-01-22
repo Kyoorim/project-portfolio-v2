@@ -80,23 +80,49 @@ const WriteBoard = ({ userObj }) => {
   };
 
   return (
-    <Box as="form" onSubmit={onSubmit}>
+    <Box
+      as="form"
+      onSubmit={onSubmit}
+      display="flex"
+      flexDirection="column"
+      alignItems="flex-end"
+      boxSizing="border-box"
+      width="100%"
+      height="25%"
+      p={["0.8em 0.8em 0px 0.8em"]}
+      bg="#f6f6f6"
+      border={["1px solid"]}
+      borderColor="#d3d3d3"
+      borderX="none"
+    >
       <Box
         as="textarea"
         value={text}
         type="text"
         placeholder="방명록을 남겨주세요🥰"
         onChange={onTextChange}
+        width="100%"
+        height="80%"
+        border={["1px solid"]}
+        borderColor="#d3d3d3"
       ></Box>
-      <Box as="p">
+      <Box
+        as="p"
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-end"
+        my={1}
+        width={[1, 1, 1 / 2]}
+      >
         <Box
           as="input"
           type="file"
           accept="image/*"
           id="input-file"
           onChange={onFileChange}
+          width={[3 / 4, 3 / 4, 4 / 5]}
         ></Box>
-        <Box as="button" type="submit">
+        <Box as="button" type="submit" width={[1 / 4, 1 / 4, 1 / 5]}>
           등록
         </Box>
       </Box>
