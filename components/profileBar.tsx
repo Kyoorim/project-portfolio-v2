@@ -21,10 +21,11 @@ const ProfileBar = ({ children }: { children: React.ReactNode }) => {
         list-style="none"
         margin={[10, 10, 0]}
       >
-        <Box pr={10} mr={10}>
+        {/* 방문자 수 counting 기능 추가하기 */}
+        {/* <Box pr={10} mr={10}>
           TODAY <span className="today">1</span>
         </Box>
-        <Box>TOTAL 2022</Box>
+        <Box>TOTAL 2022</Box> */}
       </Center>
       {children}
     </Box>

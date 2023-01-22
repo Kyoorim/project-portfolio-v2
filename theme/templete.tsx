@@ -28,7 +28,7 @@ export const template = {
 export const profileTemplate = {
   mobile: {
     rows: "auto",
-    columns: "30% 30% auto",
+    columns: "28% 27% auto",
     area: ` 
        "myphoto"
        "mysns"

@@ -16,7 +16,7 @@ export type AnswerType = {
 
 const AnswerBox = ({ answer }: AnswerType) => {
   return (
-    <Center
+    <Box
       as="li"
       flexDirection="column"
       alignItems="center"
@@ -24,21 +24,35 @@ const AnswerBox = ({ answer }: AnswerType) => {
       width="90%"
       lineHeight="135%"
     >
-      <Box as="h1" color="orange" pt={20}>
+      <Box as="h1" color="orange" pt={20} fontSize={[2, 2, 4]}>
         {answer.title}
       </Box>
-      <Box as="p">{answer.intro}</Box>
+      <Box as="p" whiteSpace="pre-wrap" fontSize={[1, 1, 2]}>
+        {answer.intro}
+      </Box>
       {!answer.intro && (
         <>
-          <h2>{answer.name1}</h2>
-          <span>{answer.content1}</span>
-          <h2>{answer.name2}</h2>
-          <span>{answer.content2}</span>
-          <h2>{answer.name3}</h2>
-          <span>{answer.content3}</span>
+          <Box as="h3" fontSize={[2, 2, 3]}>
+            {answer.name1}
+          </Box>
+          <Box as="span" fontSize={[1, 1, 2]}>
+            {answer.content1}
+          </Box>
+          <Box as="h3" fontSize={[2, 2, 3]}>
+            {answer.name2}
+          </Box>
+          <Box as="span" fontSize={[1, 1, 2]}>
+            {answer.content2}
+          </Box>
+          <Box as="h3" fontSize={[2, 2, 3]}>
+            {answer.name3}
+          </Box>
+          <Box as="span" fontSize={[1, 1, 2]}>
+            {answer.content3}
+          </Box>
         </>
       )}
-    </Center>
+    </Box>
   );
 };
 
