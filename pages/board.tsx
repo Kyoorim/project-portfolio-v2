@@ -10,11 +10,16 @@ import Card from "../components/card";
 import Main from "../components/main";
 import WriteBoard from "../components/writeBoard";
 import { Box, Center } from "ready-to-use-components";
+import { UserObj } from "../types";
+import { List } from "../types";
 
-const Board = ({ userObj, isLoggedIn }) => {
-  const [list, setList] = useState([]);
+const Board: React.FC<{ isLoggedIn: Boolean; userObj: UserObj }> = ({
+  isLoggedIn,
+  userObj,
+}) => {
+  const [list, setList] = useState<List[]>([]);
 
-  const onSocialClick = async (e) => {
+  const onSocialClick = async (e: React.MouseEvent<HTMLElement>) => {
     try {
       await apiService.SocialLogin(e);
       alert("로그인 성공");
@@ -41,7 +46,7 @@ const Board = ({ userObj, isLoggedIn }) => {
     <Layout>
       <ProfileBar>
         <Card>
-          <ProfileContent isLoggedIn={isLoggedIn} userObj={userObj} />
+          <ProfileContent isLoggedIn={isLoggedIn} />
         </Card>
       </ProfileBar>
       <Main>

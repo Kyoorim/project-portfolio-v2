@@ -6,16 +6,19 @@ import ProfileBar from "../components/profileBar";
 import ProfileContent from "../components/profileContent";
 import mainpic from "../asset/mainpic.png";
 import Image from "next/image";
+import { UserObj } from "../types";
 
-export default function Home({ isLoggedIn, userObj }) {
+const Home: React.FC<{ isLoggedIn: Boolean; userObj: UserObj }> = ({
+  isLoggedIn,
+}) => {
   return (
     <Layout>
       <ProfileBar>
         <Card>
-          <ProfileContent isLoggedIn={isLoggedIn} userObj={userObj} />
+          <ProfileContent isLoggedIn={isLoggedIn} />
         </Card>
       </ProfileBar>
-      <Main isLoggedIn={isLoggedIn} userObj={userObj}>
+      <Main>
         <Card>
           <Box as="section">
             <Box
@@ -89,4 +92,6 @@ export default function Home({ isLoggedIn, userObj }) {
       </Main>
     </Layout>
   );
-}
+};
+
+export default Home;

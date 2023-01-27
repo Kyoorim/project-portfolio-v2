@@ -1,20 +1,7 @@
-import { Box, Center } from "ready-to-use-components";
+import { Box } from "ready-to-use-components";
+import { AnswerType } from "../types";
 
-export type AnswerType = {
-  answer: {
-    id: number;
-    title?: string;
-    intro?: string;
-    name1?: string;
-    content1?: string;
-    name2?: string;
-    content2?: string;
-    name3?: string;
-    content3?: string;
-  };
-};
-
-const AnswerBox = ({ answer }: AnswerType) => {
+const AnswerBox: React.FC<{ answer: AnswerType }> = ({ answer }) => {
   return (
     <Box
       as="li"

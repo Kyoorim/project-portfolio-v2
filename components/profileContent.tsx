@@ -5,7 +5,7 @@ import myphoto from "../asset/myphoto.jpeg";
 import { TfiGithub, TfiWrite } from "react-icons/tfi";
 import { authService } from "../config";
 
-const ProfileContent = ({ isLoggedIn, userObj }) => {
+const ProfileContent: React.FC<{ isLoggedIn: Boolean }> = ({ isLoggedIn }) => {
   const onLogoutClick = () => {
     authService.signOut();
     alert("로그아웃 되었습니다");

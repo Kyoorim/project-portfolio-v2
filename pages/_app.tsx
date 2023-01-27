@@ -5,11 +5,11 @@ import "../styles/styles.css";
 import type { AppProps } from "next/app";
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const [init, setInit] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(
+  const [init, setInit] = useState<Boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<Object | null>(
     authService.currentUser
   );
-  const [userObj, setUserObj] = useState(null);
+  const [userObj, setUserObj] = useState<Object | null>(null);
 
   useEffect(() => {
     const auth = getAuth();
