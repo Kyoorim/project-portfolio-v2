@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { apiService } from "../pages/api";
 import { Box } from "ready-to-use-components";
+import { UserObj } from "../types";
 
-const WriteBoard = ({ userObj }) => {
+const WriteBoard: React.FC<{ userObj: UserObj }> = ({ userObj }) => {
   const [text, setText] = useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: React.MouseEvent) => {
     event.preventDefault();
 
     const textObj = {
@@ -34,7 +35,7 @@ const WriteBoard = ({ userObj }) => {
     }
   };
 
-  const onTextChange = (event) => {
+  const onTextChange = (event: React.MouseEvent) => {
     const {
       target: { value },
     } = event;

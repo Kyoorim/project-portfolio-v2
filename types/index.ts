@@ -16,11 +16,11 @@ export type UserObj = {
 };
 
 export type List = {
-  attachmentUrl?: string;
-  author: string;
-  createdAt: number;
-  creatorId: string;
+  attachmentUrl?: string | undefined;
+  author?: string;
+  createdAt?: number;
+  creatorId?: string;
   id: string;
-  postedAt: string;
-  text: string;
+  postedAt?: string;
+  text?: string;
 };

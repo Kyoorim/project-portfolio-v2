@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { dbService } from "../config";
 import { doc, deleteDoc, updateDoc } from "firebase/firestore";
 import { Box, Center } from "ready-to-use-components";
+import { List } from "../types";
 
-const BoardBox = ({ list, isOwner, isLoggedIn }) => {
-  const [editing, setEditing] = useState(false);
+const BoardBox: React.FC<{
+  list: List;
+  isOwner: Boolean;
+  isLoggedIn: Boolean;
+}> = ({ list, isOwner, isLoggedIn }) => {
+  const [editing, setEditing] = useState<Boolean>(false);
   const [newText, setNewText] = useState(list.text);
 
   const PostRef = doc(dbService, "list", `${list.id}`);
@@ -20,7 +25,7 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
     setEditing((prev) => !prev);
   };
 
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: React.MouseEvent) => {
     e.preventDefault();
     await updateDoc(PostRef, {
       text: newText,
@@ -38,7 +43,7 @@ const BoardBox = ({ list, isOwner, isLoggedIn }) => {
     setEditing(false);
   };
 
-  const onTextChange = (e) => {
+  const onTextChange = (e: React.MouseEvent) => {
     const {
       target: { value },
     } = e;
