@@ -4,6 +4,7 @@ import Main from "../components/main";
 import MyInfo from "../components/myInfo";
 import ProfileBar from "../components/profileBar";
 import ProfileList from "../components/profileList";
+import ProjectDetail from "./projectDetail";
 
 const AboutMe = () => {
   return (
@@ -15,7 +16,8 @@ const AboutMe = () => {
       </ProfileBar>
       <Main>
         <Card>
-          <MyInfo />
+          {/* <MyInfo/> */}
+          <ProjectDetail />
         </Card>
       </Main>
     </Layout>

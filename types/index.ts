@@ -24,3 +24,14 @@ export type List = {
   postedAt?: string;
   text?: string;
 };
+
+export type ProjectDetail = {
+  id: number;
+  title: string;
+  stack: string;
+  content: string;
+  image: {
+    id: number;
+    image: string | HTMLImageElement;
+  }[];
+};
