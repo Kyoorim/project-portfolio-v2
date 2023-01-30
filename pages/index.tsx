@@ -1,4 +1,4 @@
-import { Box, SimpleGrid } from "ready-to-use-components";
+import { Box } from "ready-to-use-components";
 import Card from "../components/card";
 import Layout from "../components/layout";
 import Main from "../components/main";
@@ -6,13 +6,16 @@ import ProfileBar from "../components/profileBar";
 import ProfileContent from "../components/profileContent";
 import mainpic from "../asset/mainpic.png";
 import Image from "next/image";
+import { UserObj } from "../types";
 
-export default function Home() {
+const Home: React.FC<{ isLoggedIn: Boolean; userObj: UserObj }> = ({
+  isLoggedIn,
+}) => {
   return (
     <Layout>
       <ProfileBar>
         <Card>
-          <ProfileContent />
+          <ProfileContent isLoggedIn={isLoggedIn} />
         </Card>
       </ProfileBar>
       <Main>
@@ -89,4 +92,6 @@ export default function Home() {
       </Main>
     </Layout>
   );
-}
+};
+
+export default Home;

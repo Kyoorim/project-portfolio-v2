@@ -3,8 +3,9 @@ import { Box, Center } from "ready-to-use-components";
 import Link from "next/link";
 
 const navLinks = [
-  { title: "Home", path: "/" },
-  { title: "AboutMe", path: "/aboutMe" },
+  { title: "홈", path: "/" },
+  { title: "프로필", path: "/aboutMe" },
+  { title: "방명록", path: "/board" },
 ];
 
 const Nav = () => {

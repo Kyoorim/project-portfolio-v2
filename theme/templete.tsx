@@ -27,31 +27,30 @@ export const template = {
 
 export const profileTemplate = {
   mobile: {
-    rows: "auto",
+    rows: "70% auto",
     columns: "28% 27% auto",
     area: ` 
-       "myphoto"
-       "mysns"
-       "myinfo"
-  
+       "myphoto mysns myinfo"
+       "myphoto mysns myinfo"
+       "signin mysns myinfo"
        `,
   },
   tablet: {
-    rows: "auto",
-    columns: "40% 20% auto",
+    rows: "70% 30%",
+    columns: "25% 25% auto",
     area: ` 
-    "myphoto"
-    "mysns"
-    "myinfo"
+    "myphoto mysns myinfo"
+    "signin signin myinfo"
        `,
   },
   desktop: {
-    rows: "40% 30% 30%",
+    rows: "40% 20% 30% 10%",
     columns: "auto",
     area: ` 
        "myphoto" 
        "mysns" 
        "myinfo"
+       "signin"
        `,
   },
 };
