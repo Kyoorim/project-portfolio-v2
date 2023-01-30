@@ -28,7 +28,7 @@ export type List = {
 export type ProjectDetail = {
   id: number;
   title: string;
-  stack: string;
+  stack: { id: number; stack: string }[];
   content: string;
   image: {
     id: number;

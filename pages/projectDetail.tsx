@@ -23,15 +23,38 @@ const ProjectDetail = () => {
           key={project.id}
           borderBottom="1px solid"
           borderColor="grey"
-          pb="2em"
+          pb="1em"
+          mb="1em"
         >
-          <Box as="h3" fontSize={[2, 2, 3]}>
+          <Box as="h3" fontSize={[2, 2, 3]} m={0}>
             {project.title}
           </Box>
-          <Box>{project.stack}</Box>
-          <Box as="span" fontSize={[1, 1, 2]}>
+          <Box
+            mt="0.5em"
+            display="flex"
+            flexDirection="row"
+            flexWrap="wrap"
+            justifyContent="center"
+          >
+            {project.stack.map((stack) => (
+              <Box
+                key={stack.id}
+                fontSize={["0.4rem", "0.4rem", "0.8rem"]}
+                bg="#54C0DC"
+                color="white"
+                borderRadius="10px"
+                px="0.5em"
+                mr="0.2em"
+                mb="0.2em"
+              >
+                {stack.stack}
+              </Box>
+            ))}
+          </Box>
+          <Box fontSize={[1, 1, 2]} py="1em">
             {project.content}
           </Box>
+
           <Box as="section">
             {project.image.map((img) => (
               <Image
