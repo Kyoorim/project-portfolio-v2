@@ -1,9 +1,9 @@
 import Card from "../components/card";
 import Layout from "../components/layout";
 import Main from "../components/main";
-import MyInfo from "../components/myInfo";
 import ProfileBar from "../components/profileBar";
 import ProfileList from "../components/profileList";
+import ProjectDetail from "../components/projectDetail";
 
 const AboutMe = () => {
   return (
@@ -15,7 +15,7 @@ const AboutMe = () => {
       </ProfileBar>
       <Main>
         <Card>
-          <MyInfo />
+          <ProjectDetail />
         </Card>
       </Main>
     </Layout>

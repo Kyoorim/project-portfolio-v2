@@ -1,6 +1,7 @@
 import { Box } from "ready-to-use-components";
 import { dummyProjectDetail as myproject } from "../asset/dummyProjectDetail";
 import Image from "next/image";
+import SimpleImageSlider from "react-simple-image-slider";
 
 const ProjectDetail = () => {
   return (
@@ -55,13 +56,14 @@ const ProjectDetail = () => {
             {project.content}
           </Box>
 
-          <Box as="section">
+          <Box as="section" width="100%">
             {project.image.map((img) => (
               <Image
                 key={img.id}
                 alt="image"
-                width={150}
-                height={100}
+                width={110}
+                height={90}
+                // sizes="320 640 750"
                 src={img.image}
                 style={{ marginRight: "0.5em" }}
               />

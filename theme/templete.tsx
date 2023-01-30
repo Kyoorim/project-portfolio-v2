@@ -18,7 +18,7 @@ export const template = {
   },
   desktop: {
     rows: "auto",
-    columns: "30% auto",
+    columns: "25% auto",
     area: ` 
      "profileBar main"
      `,
@@ -74,9 +74,9 @@ export const mainTemplate = {
   },
   desktop: {
     rows: "auto",
-    columns: "80% auto",
+    columns: "70% 20% auto",
     area: ` 
-     "mainContainer playlist"
+     ". . mainContainer playlist"
      `,
   },
 };
