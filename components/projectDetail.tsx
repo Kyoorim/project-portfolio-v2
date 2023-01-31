@@ -1,6 +1,7 @@
 import { Box } from "ready-to-use-components";
 import { dummyProjectDetail as myproject } from "../asset/dummyProjectDetail";
 import ImageBox from "./imageBox";
+import { AiOutlineLink } from "react-icons/ai";
 
 const ProjectDetail = () => {
   return (
@@ -26,8 +27,28 @@ const ProjectDetail = () => {
           pb="1em"
           mb="1em"
         >
-          <Box as="h3" fontSize={[2, 2, 3]} m={0}>
+          <Box
+            as="h3"
+            fontSize={[2, 2, 3]}
+            m={0}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
             {project.title}
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginLeft: "0.3em",
+                cursor: "pointer",
+              }}
+            >
+              <AiOutlineLink />
+            </a>
           </Box>
           <Box fontSize={[1, 1, 2]} m={0}>
             {project.period}
@@ -57,20 +78,6 @@ const ProjectDetail = () => {
           <Box fontSize={[1, 1, 2]} py="1em">
             {project.content}
           </Box>
-
-          {/* <Box as="section" width="100%">
-            {project.image.map((img) => (
-              <Image
-                key={img.id}
-                alt="image"
-                width={110}
-                height={90}
-                // sizes="320 640 750"
-                src={img.image}
-                style={{ marginRight: "0.5em" }}
-              />
-            ))}
-          </Box> */}
           <ImageBox project={project} />
         </Box>
       ))}

@@ -5,6 +5,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 1,
     title: "kartrade - 포토카드 거래 사이트 ",
     period: "(23.01.23-23.01.31)",
+    link: "https://github.com/Kyoorim/project-kartrade",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "next.js" },
@@ -12,8 +13,8 @@ export const dummyProjectDetail: ProjectDetail[] = [
     ],
     content: "#반응형 화면 #검색 기능 #가격순 정렬 기능 ",
     image: [
-      { idx: 1, imageContent: "/image/kartrade1.png" },
-      { idx: 2, imageContent: "/image/kartrade2.png" },
+      { idx: 1, imageContent: "/image/kartrade2.png" },
+      { idx: 2, imageContent: "/image/kartrade1.png" },
       { idx: 3, imageContent: "/image/kartrade3.png" },
     ],
   },
@@ -21,6 +22,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 2,
     title: "싸이월드 미니포트폴리오 ver.2 ",
     period: "(22.12.29-23.01.31)",
+    link: "https://github.com/Kyoorim/project-portfolio-v2",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "next.js" },
@@ -39,6 +41,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 3,
     title: "ready-to-use-component ",
     period: "(22.12.11-23.01.01)",
+    link: "https://github.com/Kyoorim/ready-to-use-components",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "styled-system" },
@@ -53,6 +56,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 4,
     title: "싸이월드 미니포트폴리오 ver.1 ",
     period: "(22.11.01-22.11.16)",
+    link: "https://github.com/Kyoorim/project-portfolio",
     stack: [
       { idx: 1, stackContent: "javascript" },
       { idx: 2, stackContent: "react" },
@@ -70,6 +74,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 5,
     title: "단비 - 단말기 비교사이트 ",
     period: "(22.09.13-22.10.11)",
+    link: "https://velog.io/@tootb/Main-Project-KPT-%ED%9A%8C%EA%B3%A0",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "styled-components" },
@@ -85,6 +90,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 6,
     title: "Stack Overflow 클론 ",
     period: "(22.08.24-22.09.07)",
+    link: "https://velog.io/@tootb/Pre-Project-KPT%ED%9A%8C%EA%B3%A0",
     stack: [
       { idx: 1, stackContent: "react" },
       { idx: 2, stackContent: "styled-components" },

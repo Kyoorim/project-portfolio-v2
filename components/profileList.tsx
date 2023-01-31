@@ -10,14 +10,14 @@ const ProfileList = () => {
         👩🏻 내 소개
       </Box>
       <Box as="nav">
-        <Box as="ul" m={0}>
+        <Box as="ul" m={0} style={{ cursor: "pointer" }}>
           <Box
             as="li"
             mb="0.6em"
             fontSize={["0.8rem", "0.8rem", "0.9rem"]}
             onClick={() => router.push("/aboutMe")}
           >
-            | 자기 소개
+            | 자기소개
           </Box>
           <Box
             as="li"
