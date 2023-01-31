@@ -1,7 +1,6 @@
 import { Box } from "ready-to-use-components";
 import { dummyProjectDetail as myproject } from "../asset/dummyProjectDetail";
-import Image from "next/image";
-import SimpleImageSlider from "react-simple-image-slider";
+import ImageBox from "./imageBox";
 
 const ProjectDetail = () => {
   return (
@@ -30,6 +29,9 @@ const ProjectDetail = () => {
           <Box as="h3" fontSize={[2, 2, 3]} m={0}>
             {project.title}
           </Box>
+          <Box fontSize={[1, 1, 2]} m={0}>
+            {project.period}
+          </Box>
           <Box
             mt="0.5em"
             display="flex"
@@ -39,7 +41,7 @@ const ProjectDetail = () => {
           >
             {project.stack.map((stack) => (
               <Box
-                key={stack.id}
+                key={stack.idx}
                 fontSize={["0.4rem", "0.4rem", "0.8rem"]}
                 bg="#54C0DC"
                 color="white"
@@ -48,7 +50,7 @@ const ProjectDetail = () => {
                 mr="0.2em"
                 mb="0.2em"
               >
-                {stack.stack}
+                {stack.stackContent}
               </Box>
             ))}
           </Box>
@@ -56,7 +58,7 @@ const ProjectDetail = () => {
             {project.content}
           </Box>
 
-          <Box as="section" width="100%">
+          {/* <Box as="section" width="100%">
             {project.image.map((img) => (
               <Image
                 key={img.id}
@@ -68,7 +70,8 @@ const ProjectDetail = () => {
                 style={{ marginRight: "0.5em" }}
               />
             ))}
-          </Box>
+          </Box> */}
+          <ImageBox project={project} />
         </Box>
       ))}
     </Box>

@@ -28,10 +28,11 @@ export type List = {
 export type ProjectDetail = {
   id: number;
   title: string;
-  stack: { id: number; stack: string }[];
+  period: string;
+  stack: { idx: number; stackContent: string }[];
   content: string;
   image: {
-    id: number;
-    image: string | HTMLImageElement;
+    idx: number;
+    imageContent: string | HTMLImageElement;
   }[];
 };
