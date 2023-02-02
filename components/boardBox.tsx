@@ -70,7 +70,7 @@ const BoardBox: React.FC<{
             bg="#f6f6f6"
             p={["2px 10px 2px 10px"]}
           >
-            <Center>
+            <Center width="70%">
               <Box
                 as="h4"
                 fontSize="0.9rem"
@@ -89,7 +89,11 @@ const BoardBox: React.FC<{
               <button
                 type="submit"
                 value="update post"
-                style={{ border: "none", backgroundColor: "#f6f6f6" }}
+                style={{
+                  fontSize: "0.8rem",
+                  border: "none",
+                  backgroundColor: "#f6f6f6",
+                }}
               >
                 업데이트
               </button>
