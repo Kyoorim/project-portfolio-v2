@@ -35,11 +35,10 @@ const WriteBoard: React.FC<{ userObj: UserObj }> = ({ userObj }) => {
     }
   };
 
-  const onTextChange = (event: React.MouseEvent) => {
-    const {
-      target: { value },
-    } = event;
-    setText(value);
+  const onTextChange = (event: Event) => {
+    const result = (event.target as HTMLTextAreaElement).value;
+
+    setText(result);
   };
 
   return (

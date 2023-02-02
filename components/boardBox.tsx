@@ -43,11 +43,9 @@ const BoardBox: React.FC<{
     setEditing(false);
   };
 
-  const onTextChange = (e: React.MouseEvent) => {
-    const {
-      target: { value },
-    } = e;
-    setNewText(value);
+  const onTextChange = (e: Event) => {
+    const result = (e.target as HTMLTextAreaElement).value;
+    setNewText(result);
   };
 
   return (
