@@ -20,7 +20,7 @@ export type List = {
   author?: string;
   createdAt?: number;
   creatorId?: string;
-  id: string;
+  id?: string;
   postedAt?: string;
   text?: string;
 };
