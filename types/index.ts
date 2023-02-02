@@ -29,7 +29,9 @@ export type ProjectDetail = {
   id: number;
   title: string;
   period: string;
-  link: string;
+  github?: string;
+  storybook?: string;
+  link?: string;
   stack: { idx: number; stackContent: string }[];
   content: string;
   image: {

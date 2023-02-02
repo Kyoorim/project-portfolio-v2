@@ -5,7 +5,8 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 1,
     title: "kartrade - 포토카드 거래 사이트 ",
     period: "(23.01.23-23.01.31)",
-    link: "https://github.com/Kyoorim/project-kartrade",
+    github: "https://github.com/Kyoorim/project-kartrade",
+    link: "https://project-kartrade-19rt-opdq13wi3-kyoorim.vercel.app/",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "next.js" },
@@ -22,6 +23,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 2,
     title: "싸이월드 미니포트폴리오 ver.2 ",
     period: "(22.12.29-23.01.31)",
+    github: "https://github.com/Kyoorim/project-portfolio-v2",
     link: "https://github.com/Kyoorim/project-portfolio-v2",
     stack: [
       { idx: 1, stackContent: "typescript" },
@@ -41,7 +43,9 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 3,
     title: "ready-to-use-component ",
     period: "(22.12.11-23.01.01)",
-    link: "https://github.com/Kyoorim/ready-to-use-components",
+    github: "https://github.com/Kyoorim/ready-to-use-components",
+    storybook:
+      "https://63abd5933a3436964ac7a438-lizefvdbli.chromatic.com/?path=/story/box--default",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "styled-system" },
@@ -56,7 +60,8 @@ export const dummyProjectDetail: ProjectDetail[] = [
     id: 4,
     title: "싸이월드 미니포트폴리오 ver.1 ",
     period: "(22.11.01-22.11.16)",
-    link: "https://github.com/Kyoorim/project-portfolio",
+    github: "https://github.com/Kyoorim/project-portfolio",
+    link: "https://project-portfolio-inky.vercel.app/",
     stack: [
       { idx: 1, stackContent: "javascript" },
       { idx: 2, stackContent: "react" },

@@ -1,7 +1,8 @@
 import { Box } from "ready-to-use-components";
 import { dummyProjectDetail as myproject } from "../asset/dummyProjectDetail";
 import ImageBox from "./imageBox";
-import { AiOutlineLink } from "react-icons/ai";
+import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
+import { SiStorybook } from "react-icons/si";
 
 const ProjectDetail = () => {
   return (
@@ -35,20 +36,52 @@ const ProjectDetail = () => {
             justifyContent="center"
             alignItems="center"
           >
-            {project.title}
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginLeft: "0.3em",
-                cursor: "pointer",
-              }}
-            >
-              <AiOutlineLink />
-            </a>
+            {project.title} |
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginLeft: "0.5em",
+                  cursor: "pointer",
+                }}
+              >
+                <AiOutlineGithub />
+              </a>
+            )}
+            {project.storybook && (
+              <a
+                href={project.storybook}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginLeft: "0.3em",
+                  cursor: "pointer",
+                }}
+              >
+                <SiStorybook />
+              </a>
+            )}
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginLeft: "0.3em",
+                  cursor: "pointer",
+                }}
+              >
+                <AiOutlineLink />
+              </a>
+            )}
           </Box>
           <Box fontSize={[1, 1, 2]} m={0}>
             {project.period}
