@@ -19,7 +19,7 @@ const Board: React.FC<{ isLoggedIn: Boolean; userObj: UserObj }> = ({
 }) => {
   const [list, setList] = useState<List[]>([]);
 
-  const onSocialClick = async (e: React.MouseEvent<HTMLElement>) => {
+  const onSocialClick = async (e: Event) => {
     try {
       await apiService.SocialLogin(e);
       alert("로그인 성공");
