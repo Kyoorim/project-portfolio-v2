@@ -9,7 +9,7 @@
 
 > 개발기간: 202222.12.29 ~ 2023.01.31
 >
-> 배포링크:  
+> <a href="https://project-portfolio-v2.vercel.app/"> 배포링크 바로가기 </a>  
 >
 > <a href="https://github.com/Kyoorim/project-portfolio">싸이월드 미니포트폴리오 ver.1 보러가기</a>
 
