@@ -24,7 +24,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     title: "싸이월드 포트폴리오 ver.2 ",
     period: "(22.12.29-23.01.31)",
     github: "https://github.com/Kyoorim/project-portfolio-v2",
-    link: "https://project-portfolio-v2-ahuuye9ve-kyoorim.vercel.app",
+    link: "https://project-portfolio-v2.vercel.app/",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "next.js" },
