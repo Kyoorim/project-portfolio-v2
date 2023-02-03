@@ -3,6 +3,7 @@ import { dummyProjectDetail as myproject } from "../asset/dummyProjectDetail";
 import ImageBox from "./imageBox";
 import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
 import { SiStorybook } from "react-icons/si";
+import { FaNpm } from "react-icons/fa";
 
 const ProjectDetail = () => {
   return (
@@ -65,6 +66,21 @@ const ProjectDetail = () => {
                 }}
               >
                 <SiStorybook />
+              </a>
+            )}
+            {project.npm && (
+              <a
+                href={project.npm}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginLeft: "0.3em",
+                  cursor: "pointer",
+                }}
+              >
+                <FaNpm />
               </a>
             )}
             {project.link && (

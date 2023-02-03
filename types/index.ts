@@ -31,6 +31,7 @@ export type ProjectDetail = {
   period: string;
   github?: string;
   storybook?: string;
+  npm?: string;
   link?: string;
   stack: { idx: number; stackContent: string }[];
   content: string;

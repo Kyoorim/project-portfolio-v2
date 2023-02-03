@@ -46,6 +46,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     github: "https://github.com/Kyoorim/ready-to-use-components",
     storybook:
       "https://63abd5933a3436964ac7a438-lizefvdbli.chromatic.com/?path=/story/box--default",
+    npm: "https://www.npmjs.com/package/ready-to-use-components",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "styled-system" },
