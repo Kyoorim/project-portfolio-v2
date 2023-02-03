@@ -70,10 +70,10 @@ const BoardBox: React.FC<{
             bg="#f6f6f6"
             p={["2px 10px 2px 10px"]}
           >
-            <Center width="70%">
+            <Center width="70%" display="flex" justifyContent="flex-start">
               <Box
                 as="h4"
-                fontSize="0.9rem"
+                fontSize="0.8rem"
                 my="0px"
                 mr="10px"
                 fontWeight={700}
