@@ -6,7 +6,7 @@ export const dummyProjectDetail: ProjectDetail[] = [
     title: "포토카드 거래 사이트 ",
     period: "(23.01.23-23.01.31)",
     github: "https://github.com/Kyoorim/project-kartrade",
-    link: "https://project-kartrade-19rt-opdq13wi3-kyoorim.vercel.app/",
+    link: "https://project-kartrade.vercel.app/",
     stack: [
       { idx: 1, stackContent: "typescript" },
       { idx: 2, stackContent: "next.js" },
