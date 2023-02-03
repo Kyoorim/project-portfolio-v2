@@ -43,11 +43,9 @@ const BoardBox: React.FC<{
     setEditing(false);
   };
 
-  const onTextChange = (e: React.MouseEvent) => {
-    const {
-      target: { value },
-    } = e;
-    setNewText(value);
+  const onTextChange = (e: Event) => {
+    const result = (e.target as HTMLTextAreaElement).value;
+    setNewText(result);
   };
 
   return (
@@ -72,10 +70,10 @@ const BoardBox: React.FC<{
             bg="#f6f6f6"
             p={["2px 10px 2px 10px"]}
           >
-            <Center>
+            <Center width="70%" display="flex" justifyContent="flex-start">
               <Box
                 as="h4"
-                fontSize="0.9rem"
+                fontSize="0.8rem"
                 my="0px"
                 mr="10px"
                 fontWeight={700}
@@ -91,7 +89,11 @@ const BoardBox: React.FC<{
               <button
                 type="submit"
                 value="update post"
-                style={{ border: "none", backgroundColor: "#f6f6f6" }}
+                style={{
+                  fontSize: "0.8rem",
+                  border: "none",
+                  backgroundColor: "#f6f6f6",
+                }}
               >
                 업데이트
               </button>

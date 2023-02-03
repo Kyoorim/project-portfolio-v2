@@ -19,7 +19,7 @@ const Nav = () => {
       bg="#3188ae"
       borderRadius="10px 10px 0px 0px"
     >
-      <Box as="ul" p={10} display="flex" m={0}>
+      <Box as="ul" p={9} display="flex" m={0}>
         {navLinks.map((link) => (
           <Center as="li" key={link.title} px={10}>
             <Link
