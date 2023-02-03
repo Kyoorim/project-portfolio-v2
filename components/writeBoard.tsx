@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {ChangeEvent, useState} from "react";
 import { apiService } from "../pages/api";
 import { Box } from "ready-to-use-components";
 import { UserObj } from "../types";
@@ -35,9 +35,8 @@ const WriteBoard: React.FC<{ userObj: UserObj }> = ({ userObj }) => {
     }
   };
 
-  const onTextChange = (event: Event) => {
-    const result = (event.target as HTMLTextAreaElement).value;
-
+  const onTextChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    const result = event.target?.value;
     setText(result);
   };
 
@@ -68,6 +67,7 @@ const WriteBoard: React.FC<{ userObj: UserObj }> = ({ userObj }) => {
         border={["1px solid"]}
         borderColor="#d3d3d3"
       ></Box>
+      
       <Box
         as="p"
         display="flex"

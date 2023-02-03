@@ -19,9 +19,9 @@ const Board: React.FC<{ isLoggedIn: Boolean; userObj: UserObj }> = ({
 }) => {
   const [list, setList] = useState<List[]>([]);
 
-  const onSocialClick = async (e: Event) => {
+  const onSocialClick: React.MouseEventHandler<HTMLButtonElement> = async (e) => {
     try {
-      await apiService.SocialLogin(e);
+      await apiService.SocialLogin(e as React.MouseEvent<HTMLButtonElement, MouseEvent> & {target: {name: string}});
       alert("로그인 성공");
     } catch {
       alert("로그인이 실패했습니다");

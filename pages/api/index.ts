@@ -3,9 +3,10 @@ import { dbService } from "../../config";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore";
 import { List } from "../../types";
+import React from "react";
 
-export const SocialLogin = async (e: Event) => {
-  const name = (e.target as HTMLButtonElement).name;
+export const SocialLogin = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent> & {target: {name: string}}) => {
+  const name = e.target.name;
 
   let provider;
 
